@@ -2,20 +2,24 @@
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Computer Cats</title>
-    <meta name="twitter:card" content="player">
-    <meta name="twitter:site" content="@gardenrobot">
-    <meta name="twitter:title" content="Computer Cats">
-    <meta name="twitter:description" content="8-Bit Kitties!">
-    <meta name="twitter:image" content="">
-    <meta property="twitter:player" content="https://garden-robot.github.io/ComputerCats2.0/index.html">
-    <meta property="twitter:player:width" content="500">
-    <meta property="twitter:player:height" content="500">
-    <meta property="twitter:player:stream" content="https://garden-robot.github.io/ComputerCats2.0/index.html">
   </head>
   <body style="text-align: center">
-    <div>
-      <iframe frameborder="0" src="https://garden-robot.github.io/ComputerCats2.0/index.html" allowfullscreen="" sandbox="allow-forms allow-scripts" width="800" height="820"></iframe>
-    </div>
+    <canvas id="unity-canvas" width=800 height=800 style="width: 800px; height: 800px; background: #231F20"></canvas>
+    <script src="Build/ComputerCats2.0.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/ComputerCats2.0.data",
+        frameworkUrl: "Build/ComputerCats2.0.framework.js",
+        codeUrl: "Build/ComputerCats2.0.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "garden robot",
+        productName: "Computer Cats",
+        productVersion: "2.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
   </body>
 </html>
