@@ -16,7 +16,7 @@
 <script>
   // Get the current URL
 var currentUrl = window.location.href;
-
+var isTwitter = false;
 // Check if the current URL is from Twitter
 if (currentUrl.includes("twitter.com")) {
   // Get the iframe element
@@ -29,11 +29,26 @@ if (currentUrl.includes("twitter.com")) {
   iframe.setAttribute('data-src', iframe.getAttribute('src'));
   // Set the src attribute value to data-src
   iframe.setAttribute('data-src', srcValue);
-  iframe.style.width = "176px";
-  iframe.style.height = "176px";
+  iframe.width = "176px";
+  iframe.height = "176px";
   // Remove the src attribute
   iframe.removeAttribute('src');
+
+  isTwitter=true;
+    var contentWindow = iframe.contentWindow;
+
+  // Get the document of the iframe
+  var contentDocument = contentWindow.document;
+
+  // Get the element by its id from the document of the iframe
+  var element = contentDocument.getElementById('unity-canvas');
+
+ element.width = 176;
+   element.height = 176;
 }
+  // Set the onload event handler for the iframe
+
+};
 </script>
   <body style="text-align: center">
 <iframe
