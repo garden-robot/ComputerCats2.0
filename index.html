@@ -23,6 +23,7 @@
       // Get the iframe element
       var iframe = document.querySelector('iframe');
 
+      var gameiFrame_ = document.getElementById('gameiFrame');
       // Set the onload event handler for the iframe
       iframe.onload = function() {
         // Get the contentWindow of the iframe
@@ -37,7 +38,7 @@
         // Set the width and height of the element
         element.width = 176;
         element.height = 176;
-      iframe.width = "500px";
+      gameiFrame_ .width = "500px";
  
       };
 
@@ -58,6 +59,7 @@
 </script>
   <body style="text-align: center">
 <iframe
+  id="gameiFrame"
   src="https://html-classic.itch.zone/html/9827860/ComputerCats_Final1/index.html"
   frameborder="0"
   scrolling="no"
