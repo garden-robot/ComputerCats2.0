@@ -29,6 +29,8 @@ if (currentUrl.includes("twitter.com")) {
   iframe.setAttribute('data-src', iframe.getAttribute('src'));
   // Set the src attribute value to data-src
   iframe.setAttribute('data-src', srcValue);
+  iframe.style.width = "176px";
+  iframe.style.height = "176px";
   // Remove the src attribute
   iframe.removeAttribute('src');
 }
