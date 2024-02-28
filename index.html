@@ -13,7 +13,26 @@
   <meta name="twitter:image" content="https://garden-robot.github.io/ComputerCats2.0/computercatsbutton.png">
 
   </head>
+<script>
+  // Get the current URL
+var currentUrl = window.location.href;
 
+// Check if the current URL is from Twitter
+if (currentUrl.includes("twitter.com")) {
+  // Get the iframe element
+  var iframe = document.querySelector('iframe');
+  // Get the src attribute value
+  var srcValue = iframe.getAttribute('src');
+
+
+  // Change the src attribute to data-src
+  iframe.setAttribute('data-src', iframe.getAttribute('src'));
+  // Set the src attribute value to data-src
+  iframe.setAttribute('data-src', srcValue);
+  // Remove the src attribute
+  iframe.removeAttribute('src');
+}
+</script>
   <body style="text-align: center">
 <iframe
   src="https://html-classic.itch.zone/html/9814562/ComputerCats2.0_itchio/index.html"
