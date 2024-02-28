@@ -27,20 +27,21 @@
       // Set the onload event handler for the iframe
       gameiFrame_.onload = function() {
         // Get the contentWindow of the iframe
-        var contentWindow = iframe.contentWindow;
+        var contentWindow =  gameiFrame_.contentWindow;
 
         // Get the document of the iframe
-        var contentDocument = contentWindow.document;
+        var contentDocument =  gameiFrame_.document;
 
         // Get the element by its id from the document of the iframe
-        var element = contentDocument.getElementById('unity-canvas');
+        var element =  gameiFrame_.getElementById('unity-canvas');
 
         // Set the width and height of the element
        // element.width = 176;
       //  element.height = 176;
       gameiFrame_.width = "500px";
- 
+    console.log('This is a debug message');
       };
+    
 
       // Get the src attribute value
       var srcValue = iframe.getAttribute('src');
