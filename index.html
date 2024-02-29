@@ -30,7 +30,8 @@
 <script>
   // Get the current URL
 var currentUrl = window.location.href;
-
+    var iframe = document.querySelector('iframe');
+ iframe.setAttribute('width','100');
 // Check if the current URL is from Twitter
 if (currentUrl.includes("twitter.com")) {
   // Get the iframe element
