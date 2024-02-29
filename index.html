@@ -25,21 +25,22 @@
   allowfullscreen="true"
   allowTransparency="true"
   allow="autoplay; fullscreen; web-share"
-  sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-presentation">
-    <script type="text/javascript">
-        document.getElementById('gameFrame').onload = function()  {
-    var currentUrl = window.location.href;
-    var iframe = document.querySelector('iframe');
-
-    if (currentUrl.includes("twitter.com")) {
-      iframe.width = "500";
-    }
-    </script>
-</iframe>
+  sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-presentation"
+  onload="setIframeWidth()">
+    </iframe>
+    
 <script>
   
   // Get the current URL
 var currentUrl = window.location.href;
+    function setIframeWidth() {
+    var currentUrl = window.location.href;
+    var gameframe = document.getElementById('gameFrame');
+
+    if (currentUrl.includes("twitter.com")) {
+      gameframe.width = "500";
+    }
+  }
 
 
 // Check if the current URL is from Twitter
