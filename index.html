@@ -12,28 +12,8 @@
   <meta name="twitter:creator" content="@garden_robot">
   <meta name="twitter:image" content="https://garden-robot.github.io/ComputerCats2.0/computercatsbutton.png">
 
-    <script>
-        // Get the current URL
-        var currentUrl = window.location.href;
-    
-    if (currentUrl.includes("twitter.com")) {
-
-         var gameframe = document.getElementById('gameFrame');
-       gameFrame.width = "500";
-       gameFrame.height = "800";
-    }
-    else{
-         var gameframe = document.getElementById('gameFrame');
-        gameFrame.width = "800";
-       gameFrame.height = "800";
-    }
-
-     
-    
-
-    </script>
   </head>
-    <body style="text-align: center">
+  <body style="text-align: center">
       
 <iframe
   id="gameFrame"
@@ -48,7 +28,30 @@
     
 <script>
   
+// Selecting the iframe element 
+        var gameFrame1 = document.getElementById("gameFrame"); 
+          
+        // Adjusting the iframe height onload event 
+        gameFrame1.onload = function() {
+        // function execute while load the iframe 
 
+          // set the height of the iframe as  
+          // the height of the iframe content 
+          if (currentUrl.includes("twitter.com")) {
+           gameFrame1.style.height =  "800";
+             gameFrame1.style.width =  "500";
+           //gameFrame1.contentWindow.document.body.scrollHeight + 'px'; 
+          }
+            
+          else{
+
+              gameFrame1.style.height =  "800";
+             gameFrame1.style.width =  "800";
+          }
+  
+     
+              
+        } 
 
 
 // Check if the current URL is from Twitter
