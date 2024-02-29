@@ -26,8 +26,9 @@
 
       function resizeIframe(iframegame) {
     if (currentUrl.includes("twitter.com")) {
-       iframegame.height =  "800";
+      
              iframegame.width =  "500";
+            iframegame.style.width =  "500px !important";
            //gameFrame1.contentWindow.document.body.scrollHeight + 'px'; 
               var srcValue =  iframegame.getAttribute('src');
             
@@ -42,7 +43,7 @@
             
           else{
 
-             iframegame.height =  "800";
+            iframegame.style.width =  "800px !important";
              iframegame.width =  "800";
           }
   
@@ -54,7 +55,7 @@
     <iframe
   id="gameFrame"
   src="https://html-classic.itch.zone/html/9827860/ComputerCats_Final1/index.html"
-  width="800"
+  width=""
   height = "800"
   frameborder="0"
   scrolling="no"
