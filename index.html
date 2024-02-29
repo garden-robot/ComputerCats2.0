@@ -25,44 +25,41 @@
   allowfullscreen="true"
   allowTransparency="true"
   allow="autoplay; fullscreen; web-share"
-  sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-presentation">
+  sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-presentation"
+  onload="resizeIframe(this)" >
     </iframe>
     
-<script>
+  <script type="text/javascript">
   
 // Selecting the iframe element 
         var gameFrame1 = document.getElementById("gameFrame"); 
            var currentUrl = window.location.href;
         // Adjusting the iframe height onload event 
-        gameFrame1.onload = function() {
-        // function execute while load the iframe 
 
-          // set the height of the iframe as  
-          // the height of the iframe content 
-          if (currentUrl.includes("twitter.com")) {
-           gameFrame1.style.height =  "800";
-             gameFrame1.style.width =  "500";
+      function resizeIframe(iframegame) {
+    if (currentUrl.includes("twitter.com")) {
+           iframegame.height =  "800";
+             iframegame.width =  "500";
            //gameFrame1.contentWindow.document.body.scrollHeight + 'px'; 
-              var srcValue =  gameFrame1.getAttribute('src');
+              var srcValue =  iframegame.getAttribute('src');
             
             // Change the src attribute to data-src
-             gameFrame1.setAttribute('data-src', iframe.getAttribute('src'));
+           iframegame.setAttribute('data-src', iframe.getAttribute('src'));
             // Set the src attribute value to data-src
-             gameFrame1.setAttribute('data-src', srcValue);
+            iframegame.setAttribute('data-src', srcValue);
           
             // Remove the src attribute
-            gameFrame1.removeAttribute('src');
+           iframegame.removeAttribute('src');
           }
             
           else{
 
-              gameFrame1.style.height =  "800";
-             gameFrame1.style.width =  "800";
+             iframegame.height =  "800";
+             iframegame.width =  "800";
           }
   
+      }
      
-              
-        } 
 
 
 </script>
