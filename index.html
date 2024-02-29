@@ -26,11 +26,21 @@
   allowTransparency="true"
   allow="autoplay; fullscreen; web-share"
   sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-presentation">
+    <script type="text/javascript">
+        document.getElementById('gameFrame').onload = function()  {
+    var currentUrl = window.location.href;
+    var iframe = document.querySelector('iframe');
+
+    if (currentUrl.includes("twitter.com")) {
+      iframe.width = "500";
+    }
+    </script>
 </iframe>
 <script>
+  
   // Get the current URL
 var currentUrl = window.location.href;
-    var iframe = document.querySelector('iframe');
+
 
 // Check if the current URL is from Twitter
 if (currentUrl.includes("twitter.com")) {
@@ -44,8 +54,7 @@ if (currentUrl.includes("twitter.com")) {
   iframe.setAttribute('data-src', iframe.getAttribute('src'));
   // Set the src attribute value to data-src
   iframe.setAttribute('data-src', srcValue);
-  document.getElementById("gameFrame").width = "500";
- iframe.setAttribute('width','500');
+
   // Remove the src attribute
   iframe.removeAttribute('src');
 }
