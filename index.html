@@ -15,14 +15,15 @@
     <script>
         // Get the current URL
         var currentUrl = window.location.href;
-       var gameframe = document.getElementById('gameFrame');
+    
     if (currentUrl.includes("twitter.com")) {
 
-      
+         var gameframe = document.getElementById('gameFrame');
        gameFrame.width = "500";
        gameFrame.height = "800";
     }
     else{
+         var gameframe = document.getElementById('gameFrame');
         gameFrame.width = "800";
        gameFrame.height = "800";
     }
@@ -42,8 +43,7 @@
   allowfullscreen="true"
   allowTransparency="true"
   allow="autoplay; fullscreen; web-share"
-  sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-presentation"
-  onload="setIframeWidth()">
+  sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-presentation">
     </iframe>
     
 <script>
