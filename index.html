@@ -12,6 +12,25 @@
   <meta name="twitter:creator" content="@garden_robot">
   <meta name="twitter:image" content="https://garden-robot.github.io/ComputerCats2.0/computercatsbutton.png">
 
+    <script>
+        // Get the current URL
+        var currentUrl = window.location.href;
+       var gameframe = document.getElementById('gameFrame');
+    if (currentUrl.includes("twitter.com")) {
+
+      
+       gameFrame.width = "500";
+       gameFrame.height = "800";
+    }
+    else{
+        gameFrame.width = "800";
+       gameFrame.height = "800";
+    }
+
+     
+    
+
+    </script>
   </head>
     <body style="text-align: center">
       
@@ -20,8 +39,6 @@
   src="https://html-classic.itch.zone/html/9827860/ComputerCats_Final1/index.html"
   frameborder="0"
   scrolling="no"
-  width = "800"
-  height= "800"
   allowfullscreen="true"
   allowTransparency="true"
   allow="autoplay; fullscreen; web-share"
@@ -31,16 +48,7 @@
     
 <script>
   
-  // Get the current URL
-var currentUrl = window.location.href;
-    function setIframeWidth() {
-    var currentUrl = window.location.href;
-    var gameframe = document.getElementById('gameFrame');
 
-    if (currentUrl.includes("twitter.com")) {
-      gameframe.width = "500";
-    }
-  }
 
 
 // Check if the current URL is from Twitter
