@@ -41,6 +41,15 @@
            gameFrame1.style.height =  "800";
              gameFrame1.style.width =  "500";
            //gameFrame1.contentWindow.document.body.scrollHeight + 'px'; 
+              var srcValue =  gameFrame1.getAttribute('src');
+            
+            // Change the src attribute to data-src
+             gameFrame1.setAttribute('data-src', iframe.getAttribute('src'));
+            // Set the src attribute value to data-src
+             gameFrame1.setAttribute('data-src', srcValue);
+          
+            // Remove the src attribute
+            gameFrame1.removeAttribute('src');
           }
             
           else{
@@ -54,22 +63,6 @@
         } 
 
 
-// Check if the current URL is from Twitter
-if (currentUrl.includes("twitter.com")) {
-  // Get the iframe element
-  var iframe = document.querySelector('iframe');
-  // Get the src attribute value
-  var srcValue = iframe.getAttribute('src');
-
-
-  // Change the src attribute to data-src
-  iframe.setAttribute('data-src', iframe.getAttribute('src'));
-  // Set the src attribute value to data-src
-  iframe.setAttribute('data-src', srcValue);
-
-  // Remove the src attribute
-  iframe.removeAttribute('src');
-}
 </script>
 
   </body>
