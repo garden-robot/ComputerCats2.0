@@ -13,55 +13,10 @@
   <meta name="twitter:image" content="https://garden-robot.github.io/ComputerCats2.0/computercatsbutton.png">
 
   </head>
-<script>
-// Get the current URL
-    var currentUrl = window.location.href;
-    var isTwitter = false;
-
-    // Check if the current URL is from Twitter
-    if (currentUrl.includes("twitter.com")) {
-      // Get the iframe element
-      var iframe = document.querySelector('iframe');
-
-      var gameiFrame_ = document.getElementById('gameiFrame');
-      // Set the onload event handler for the iframe
-      gameiFrame_.onload = function() {
-        // Get the contentWindow of the iframe
-        var contentWindow =  gameiFrame_.contentWindow;
-
-        // Get the document of the iframe
-        var contentDocument =  gameiFrame_.document;
-
-        // Get the element by its id from the document of the iframe
-        var element =  gameiFrame_.getElementById('unity-canvas');
-
-        // Set the width and height of the element
-       // element.width = 176;
-      //  element.height = 176;
-      gameiFrame_.width = "500px";
-    console.log('This is a debug message');
-      };
-    
-
-      // Get the src attribute value
-      var srcValue = iframe.getAttribute('src');
-        gameiFrame_.width = "500px";
-      // Change the src attribute to data-src
-      iframe.setAttribute('data-src', srcValue);
-
-      // Set the src attribute value to data-src
-      iframe.setAttribute('src', 'about:blank');
-
-      // Set the width and height of the iframe
-   
-
-      isTwitter = true;
-    }
-</script>
-  <body style="text-align: center">
+    <body style="text-align: center">
+      
 <iframe
-  id="gameiFrame"
-  src="https://html-classic.itch.zone/html/9827860/ComputerCats_Final1/index.html"
+  src="https://html-classic.itch.zone/html/9814562/ComputerCats2.0_itchio/index.html"
   frameborder="0"
   scrolling="no"
   width = "800"
@@ -71,5 +26,28 @@
   allow="autoplay; fullscreen; web-share"
   sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-presentation">
 </iframe>
+<script>
+  // Get the current URL
+var currentUrl = window.location.href;
+
+// Check if the current URL is from Twitter
+if (currentUrl.includes("twitter.com")) {
+  // Get the iframe element
+  var iframe = document.querySelector('iframe');
+  // Get the src attribute value
+  var srcValue = iframe.getAttribute('src');
+
+
+  // Change the src attribute to data-src
+  iframe.setAttribute('data-src', iframe.getAttribute('src'));
+  // Set the src attribute value to data-src
+  iframe.setAttribute('data-src', srcValue);
+  iframe.width = "500";
+
+  // Remove the src attribute
+  iframe.removeAttribute('src');
+}
+</script>
+
   </body>
 </html>
