@@ -16,6 +16,7 @@
     <body style="text-align: center">
       
 <iframe
+  id="gameFrame"
   src="https://html-classic.itch.zone/html/9827860/ComputerCats_Final1/index.html"
   frameborder="0"
   scrolling="no"
@@ -42,7 +43,7 @@ if (currentUrl.includes("twitter.com")) {
   iframe.setAttribute('data-src', iframe.getAttribute('src'));
   // Set the src attribute value to data-src
   iframe.setAttribute('data-src', srcValue);
-  iframe.width = "500px";
+  document.getElementById("gameFrame").width = "500";
 
   // Remove the src attribute
   iframe.removeAttribute('src');
