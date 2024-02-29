@@ -31,7 +31,7 @@
   // Get the current URL
 var currentUrl = window.location.href;
     var iframe = document.querySelector('iframe');
- iframe.setAttribute('width','100');
+
 // Check if the current URL is from Twitter
 if (currentUrl.includes("twitter.com")) {
   // Get the iframe element
@@ -45,7 +45,7 @@ if (currentUrl.includes("twitter.com")) {
   // Set the src attribute value to data-src
   iframe.setAttribute('data-src', srcValue);
   document.getElementById("gameFrame").width = "500";
-
+ iframe.setAttribute('width','500');
   // Remove the src attribute
   iframe.removeAttribute('src');
 }
