@@ -25,10 +25,10 @@
         // Adjusting the iframe height onload event 
 
       function resizeIframe(iframegame) {
-    if (currentUrl.includes("github") || currentUrl.includes("twitter")) {
+    if (currentUrl.includes("twitter.com")) {
       
-             iframegame.width =  "500";
-            iframegame.style.width =  "500px !important";
+            // iframegame.width =  "500";
+           // iframegame.style.width =  "500px !important";
            //gameFrame1.contentWindow.document.body.scrollHeight + 'px'; 
               var srcValue =  iframegame.getAttribute('src');
             
@@ -41,12 +41,7 @@
            iframegame.removeAttribute('src');
           }
             
-          else{
-
-            iframegame.style.width =  "800px !important";
-             iframegame.width =  "800";
-          }
-  
+     
       }
      
 
