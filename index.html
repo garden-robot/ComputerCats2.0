@@ -19,7 +19,25 @@
   <body style="text-align: center">
       
 
-    
+    <script>
+  // Get the current script element
+  var scriptElement = document.currentScript;
+
+  // Get the current URL of the script
+  var scriptUrl = scriptElement.src;
+
+  // Append a query parameter with a timestamp to ensure uniqueness
+  var timestamp = new Date().getTime();
+  var updatedUrl = scriptUrl + '?v=' + timestamp;
+
+  // Create a new script element with the updated URL
+  var newScriptElement = document.createElement('script');
+  newScriptElement.src = updatedUrl;
+
+  // Replace the current script element with the new one
+  scriptElement.parentNode.replaceChild(newScriptElement, scriptElement);
+</script>
+
   <script type="text/javascript">
   
 // Selecting the iframe element 
